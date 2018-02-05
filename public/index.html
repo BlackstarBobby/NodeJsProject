@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mima</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <div class="colors">
+            <div class="color black"></div>
+            <div class="color red"></div>
+            <div class="color green"></div>
+            <div class="color blue"></div>
+            <div class="color yellow"></div>
+        </div>
+        <div class="chat">
+            <div class="name">
+                <input type="text">
+                <br>
+                <button>
+                    Seteaza nume
+                </button>
+            </div>
+            <div class="room" style="visibility: hidden">
+                <div class="messages">
+
+                </div>
+                <div class="bottom">
+                    <input type="text">
+                    <button>trimite</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <canvas class="whiteboard"></canvas>
+    </div>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/main.js"></script>
+</body>
+</html>

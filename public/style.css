@@ -1,0 +1,140 @@
+/**
+ * Fix user-agent
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Canvas
+ */
+
+.whiteboard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.colors {
+    position: relative;
+}
+
+.color {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    user-select: none;
+}
+
+.color.black {
+    background-color: black;
+}
+
+.color.red {
+    background-color: red;
+}
+
+.color.green {
+    background-color: green;
+}
+
+.color.blue {
+    background-color: blue;
+}
+
+.color.yellow {
+    background-color: yellow;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container > * {
+    position: relative;
+}
+
+.container > .left {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.container > .right {
+    flex-grow: 4;
+    height: 100%;
+}
+
+.chat {
+    width: 100%;
+    height: calc(100% - 20px);
+    background: #ebebeb;
+}
+
+.chat > .name {
+    top: 50%;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+
+}
+
+.chat > .name > input[type=text] {
+    width: 80%;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.chat > .name > button {
+    font-size: 24px;
+}
+
+.chat > .room {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-flow: column;
+}
+
+.chat > .room > .messages {
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.chat > .room > .messages > .message {
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.chat > .room > .messages > .message > * {
+    margin: 2px;
+}
+
+.chat > .room > .messages > .message > .from {
+    margin-right: 6px;
+    font-weight: 600;
+}
+
+.chat > .room > .bottom {
+    align-self: flex-end;
+    height: 40px;
+    width: 100%;
+    display: flex;
+}
+
+.chat > .room > .bottom > input[type=text] {
+    flex-grow: 1;
+}
+
