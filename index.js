@@ -6,6 +6,7 @@ const port = 3000;
 const path = require('path');
 
 const users = [];
+
 let designatedUser = null;
 
 app.use(express.static(path.join(__dirname, 'public')));
